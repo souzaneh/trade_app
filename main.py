@@ -13,7 +13,7 @@ import tensorflow as tf
 import numpy as np
 import pandas as pd
 #import matplotlib.pyplot as plt
-import scikit_learn as sklearn
+import  sklearn
 from sklearn.preprocessing import MinMaxScaler
 
 from keras.models import Sequential
