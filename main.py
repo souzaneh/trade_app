@@ -81,6 +81,8 @@ def sequence_data (df, x_step, y_step,train_ratio):
 # prepration data(train/validation splite, return sequences)
 x_train,  y_train , x_val, y_val, sc,train_C_df,val_C_df = sequence_data(df, x_step, y_step,train_ratio)
 
+from tensorflow.keras.models import load_model
+
 # Part 1: Data extraction/preprocessing
 #def prepare_data():
     # Your code to fetch and clean data
@@ -89,13 +91,12 @@ x_train,  y_train , x_val, y_val, sc,train_C_df,val_C_df = sequence_data(df, x_s
 # Part 2: Load model and predict
 def run_prediction():
     model = load_model("LSTM_GRU_model.keras")
-save   # data = prepare_data()
-    lstm_GRU_y_val_pred = sc.inverse_transform(LSTM_GRU_model.predict(x_train) )
+   # data = prepare_data()
+    predictions = sc.inverse_transform(model.predict(x_train) )
    # predictions = model.predict(data)
-    pd.DataFrame(lstm_GRU_y_val_pred).to_csv("predictions.csv", index=False)
+    pd.DataFrame(predictions).to_csv("predictions.csv", index=False)
 
 
 if __name__ == "__main__":
     run_prediction()
-
 
