@@ -2,5 +2,5 @@ numpy
 pandas
 tensorflow
 yfinance
-sklearn
+scikit-learn
 requests
