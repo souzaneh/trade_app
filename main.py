@@ -18,7 +18,7 @@ from sklearn.preprocessing import MinMaxScaler
 from keras.models import Sequential
 from keras.layers import Dense, SimpleRNN,LSTM, GRU
 
-!pip install yfinance
+#!pip install yfinance
 
 import yfinance as yf
 
